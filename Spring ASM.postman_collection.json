@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "6dffc11f-5822-4e9d-9935-80e5cdb3a395",
+		"name": "Spring ASM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Street",
+			"item": [
+				{
+					"name": "list street",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/streets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by street name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/streets?streetName=nguyen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							],
+							"query": [
+								{
+									"key": "streetName",
+									"value": "nguyen"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by district id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/streets?districtId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							],
+							"query": [
+								{
+									"key": "districtId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by street name and district id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/streets?streetName=nguyen&districtId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							],
+							"query": [
+								{
+									"key": "streetName",
+									"value": "nguyen"
+								},
+								{
+									"key": "districtId",
+									"value": "1"
+								},
+								{
+									"key": null,
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create street",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"láng hạ\",\r\n    \"operationDate\":1622647544761,\r\n    \"description\":\"Con đường tắc\",\r\n    \"status\":1,\r\n    \"districtId\": 5,\r\n    \"districtName\": \"Đống Đa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/streets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "District",
+			"item": [
+				{
+					"name": "list districts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/districts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"districts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/seed/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seed",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
